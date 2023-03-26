@@ -210,6 +210,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 20,
                   color: Colors.lightGreen,
                 ),
+                errorDecoration: BoxDecoration(
+                  border: Border.all(
+                    color: Theme.of(context).colorScheme.error,
+                    width: 2,
+                  ),
+                ),
               ),
               SizedBox(height: 40),
               //################################################################################################
