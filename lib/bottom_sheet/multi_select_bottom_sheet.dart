@@ -304,13 +304,16 @@ class _MultiSelectBottomSheetState<T> extends State<MultiSelectBottomSheet<T>> {
               Expanded(
                 child: widget.listType == null ||
                         widget.listType == MultiSelectListType.LIST
-                    ? ListView.builder(
-                        controller: scrollController,
-                        itemCount: _items.length,
-                        itemBuilder: (context, index) {
-                          return _buildListItem(_items[index]);
-                        },
-                      )
+                    ? Scrollbar(
+                        thumbVisibility: true,
+                        child: ListView.builder(
+                          controller: scrollController,
+                          itemCount: _items.length,
+                          itemBuilder: (context, index) {
+                            return _buildListItem(_items[index]);
+                          },
+                        ),
+                    )
                     : SingleChildScrollView(
                         controller: scrollController,
                         child: Container(
@@ -322,6 +325,7 @@ class _MultiSelectBottomSheetState<T> extends State<MultiSelectBottomSheet<T>> {
                       ),
               ),
               Container(
+                color: Color.fromRGBO(239, 239, 239, 1),
                 padding: EdgeInsets.all(2),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
