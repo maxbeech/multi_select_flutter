@@ -421,7 +421,7 @@ class __MultiSelectBottomSheetFieldViewState<V>
         barrierColor: widget.barrierColor,
         shape: widget.shape ??
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+              borderRadius: BorderRadius.vertical(top: Radius.circular(105.0)),
             ),
         isScrollControlled: true,
         context: context,
