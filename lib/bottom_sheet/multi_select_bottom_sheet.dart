@@ -306,6 +306,7 @@ class _MultiSelectBottomSheetState<T> extends State<MultiSelectBottomSheet<T>> {
                         widget.listType == MultiSelectListType.LIST
                     ? Scrollbar(
                         thumbVisibility: true,
+                        controller: scrollController,
                         child: ListView.builder(
                           controller: scrollController,
                           itemCount: _items.length,
