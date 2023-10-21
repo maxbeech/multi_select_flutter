@@ -327,7 +327,7 @@ class _MultiSelectBottomSheetState<T> extends State<MultiSelectBottomSheet<T>> {
               ),
               Container(
                 color: Color.fromRGBO(239, 239, 239, 1),
-                padding: EdgeInsets.all(2),
+                padding: EdgeInsets.only(left: 2, top: 2, right: 2, bottom: MediaQuery.of(context).padding.bottom + 2),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
